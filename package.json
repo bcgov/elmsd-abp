@@ -17,8 +17,10 @@
         "@bcgov-elmsd/eslint-config": "^1.0.1",
         "@changesets/changelog-github": "^0.4.6",
         "@changesets/cli": "^2.24.4",
+        "eslint-config-next": "latest",
         "husky": "^8.0.1",
         "lint-staged": "^13.0.3",
+        "next": "latest",
         "typescript": "^4.8.3"
     }
 }

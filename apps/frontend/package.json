@@ -10,7 +10,9 @@
     },
     "dependencies": {
         "next": "latest",
+        "ra-data-json-server": "^4.14.4",
         "react": "latest",
+        "react-admin": "^4.14.4",
         "react-dom": "latest"
     },
     "devDependencies": {
