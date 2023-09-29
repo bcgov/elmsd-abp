@@ -1,17 +1,38 @@
-# ELMSD NodeJS Quickstart
+# elmsd-abp
 
-A [cookiecutter](https://github.com/cookiecutter/cookiecutter) template to bootstrap a NodeJS monorepo with support for:
-* Changelogs and versioning use [Changesets](https://github.com/changesets/changesets)
-* [ESLint](https://github.com/eslint/eslint), [Prettier](https://github.com/prettier/prettier) and [lint-staged](https://github.com/okonet/lint-staged)
-* Git hooks managed by [husky](https://github.com/typicode/husky)
-* [Typescript](https://github.com/microsoft/typescript)
 
 ## Usage
 
-Click `Use this template` from the top of this repository, or select the `@bcgov/eslmd-nodejs-quickstart` template when creating a new repository.
+Open the `elmsd-abp.code-workspace` in Visual Studio Code.  This contains all extensions you will need for automatic linting and managing the project.
 
-The generated repository requires an initial build step which is initiated by the `cookiecutter.yaml` workflow.  Once this workflow finishes, the repository will be ready for use.
+Add your projects to the `packages` folder.  If the `packages` folder does not already exist, create it.  See below for the expected project structure.
 
-## References
+```
+📦 elmsd-abp
+ ┣ ...
+ ┣ 📂 packages
+ ┃ ┣ 📂 project-a
+ ┃ ┗ 📂 project-b
+ ┗ ...
+```
+This monorepo uses npm workspaces.  See [here](https://docs.npmjs.com/cli/v7/using-npm/workspaces) for more information on how to interact with workspaces.
 
-* Willison, Simon "Dynamic content for GitHub repository templates using cookiecutter and GitHub Actions" _Simon Willison's Weblog_ 28 August 2021 https://simonwillison.net/2021/Aug/28/dynamic-github-repository-templates/
+## Setting up `changeset-bot`
+Configure the `changeset-bot` on your GitHub repository.  See [here](https://github.com/apps/changeset-bot) for more information.
+## License
+
+```
+Copyright 2022 Province of British Columbia
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```
