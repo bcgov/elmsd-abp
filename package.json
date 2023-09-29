@@ -1,7 +1,7 @@
 {
-    "name": "@{{ cookiecutter.name }}/root",
+    "name": "@elmsd-abp/root",
     "private": true,
-    "description": "{{ cookiecutter.description }}",
+    "description": "",
     "license": "Apache-2.0",
     "author": "Sid McLaughlin <sid.mclaughlin@gov.bc.ca>",
     "workspaces": [
