@@ -9,8 +9,8 @@ const Header = () => (
       <a href="https://gov.bc.ca">
         <img width="175px" src="/BCID_H_rgb_rev.svg" alt="Go to the Government of British Columbia website" />
       </a>
-      <h2 className=" tw-text-xl">
-        <Link className=" tw-no-underline hover:tw-text-white focus:tw-text-white " href="/">
+      <h2 className="tw-text-xl">
+        <Link className=" tw-no-underline hover:tw-text-white focus:tw-text-white" href="/">
           {" "}
           WorkBC Annual Bussiness Plan
         </Link>

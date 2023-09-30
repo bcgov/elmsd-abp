@@ -3,9 +3,9 @@ import Link from "next/link"
 
 export default function Home() {
   return (
-    <main className="tw-min-h-screen tw-px-8 tw-pt-16">
-      <div className=" tw-mt-4 tw-px-8">
-        <h1 className="tw-text-4xl tw-mb-2">WorkBC Annual Business Plan</h1>
+    <main className="tw-min-h-screen">
+      <div className="tw-mt-4 tw-px-8">
+        <h1 className="tw-text-4xl tw-mb-4">WorkBC Annual Business Plan</h1>
         <p>
           The WorkBC Annual Business Plan (ABP) describes the Contractor&apos;s plan to deliver services during each fiscal year term under the WorkBC
           Employment Services Contract, the Apprentice Services Contract or the Assistive Technology Services Contract. The ABP serves as a baseline
