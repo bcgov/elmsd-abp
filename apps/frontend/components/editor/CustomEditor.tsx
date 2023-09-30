@@ -27,7 +27,7 @@ const CustomEditor = () => {
         value={text}
         init={{
           height: 500,
-          menubar: true,
+          menubar: false,
           plugins: [
             "advlist",
             "autolink",
