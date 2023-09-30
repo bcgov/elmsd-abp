@@ -1,8 +1,11 @@
+@import "~@bcgov/bootstrap-theme/dist/css/bootstrap-theme.min.css";
+@import "~@bcgov/bc-sans/css/BCSans.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -14,14 +17,17 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
+} */
+
+/* stop layout.css from overwriting bcgov bootstrap */
+[type='submit'] {
+  background-color: #38598a;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+[class='btn btn-primary'] {
+  background-color: #38598a;
+}
+
+[class='btn btn-secondary'] {
+  background-color: #b0b1b3;
 }

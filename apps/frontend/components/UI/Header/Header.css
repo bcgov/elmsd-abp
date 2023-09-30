@@ -1,0 +1,75 @@
+header {
+  background-color: #002D72;
+  border-bottom: 2px solid #fcba19;
+  padding: 0 65px 0 65px;
+  color: #fff;
+  display: flex;
+  height: 65px;
+  top: 0px;
+  position: fixed;
+  width: 100%;
+  box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.25)
+}
+
+header h1 {
+font-family: 'BCSans', 'Noto Sans', Verdana, Arial, sans-serif;
+font-weight: 550;  /* 400 */
+font-size: 28px;
+margin: 5px 5px 0 18px;
+visibility: hidden;
+}
+
+header .banner {
+display: flex;
+justify-content: flex-start;
+align-items: center;
+margin: 0 10px 0 0;
+min-width: 35em;
+/* border-style: dotted;
+border-width: 1px;
+border-color: lightgrey; */
+}
+
+header .other {
+display: flex;
+justify-content: right;
+align-items: center;
+flex-grow: 1;
+padding-right: 8.5em;
+/* border-style: dotted;
+border-width: 1px;
+border-color: lightgrey; */
+}
+
+.Beta-PhaseBanner {
+color: #fcba19;
+margin-top: -1em;
+text-transform: uppercase;
+font-weight: 600;
+font-size: 16px;
+}
+
+.ministry-login-button {
+background-color: #002D72;
+color: white;
+font-size: 14px;
+padding: 1em 2em;
+border: 1px solid white;
+border-radius: 3px;
+align-self: center;
+min-width: 13em;
+cursor: pointer;
+}
+
+.ministry-login-button:hover {
+background-color: #336699;
+}
+
+.ministry-login-button:focus {
+outline: 4px solid #3B99FC;
+outline-offset: 1px;
+}
+
+.ministry-login-button:active {
+opacity: 1;
+}
