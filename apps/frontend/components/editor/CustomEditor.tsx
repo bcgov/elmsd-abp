@@ -2,19 +2,10 @@
 
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Editor } from "@tinymce/tinymce-react"
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 
-const CustomEditor = () => {
-  const [text, setText] = useState<string>("")
-
-  const save = () => {
-    console.log("saved", text)
-  }
-
-  const cancel = () => {
-    console.log("cancel")
-  }
-
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const CustomEditor = ({ text, setText }: { text: string; setText: any }) => {
   useEffect(() => {
     console.log("text", text)
   }, [text])
@@ -58,13 +49,7 @@ const CustomEditor = () => {
         }}
         onEditorChange={setText}
       />
-      <article className="tw-prose lg:tw-prose-xl" dangerouslySetInnerHTML={{ __html: text }} />
-      <button type="submit" className="btn btn-primary tw-m-2" onClick={save}>
-        Save
-      </button>
-      <button type="button" className="btn btn-secondary" onClick={cancel}>
-        Cancel
-      </button>
+      <article className="tw-max-w-none tw-prose" dangerouslySetInnerHTML={{ __html: text }} />
     </section>
   )
 }
