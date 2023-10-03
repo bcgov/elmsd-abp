@@ -22,21 +22,22 @@ const modalStyles = {
 
 interface BCGovModalProps {
   isOpen: boolean
-  onRequestClose: (event: React.MouseEvent<Element, MouseEvent> | React.KeyboardEvent<Element>) => void
+  save: () => void
+  cancel: () => void
   contentLabel: string
   children: ReactNode
 }
 
-const BCGovModal: React.FC<BCGovModalProps> = ({ isOpen, onRequestClose, contentLabel, children }) => (
-  <Modal isOpen={isOpen} onRequestClose={onRequestClose} style={modalStyles} contentLabel={contentLabel}>
+const BCGovModal: React.FC<BCGovModalProps> = ({ isOpen, save, cancel, contentLabel, children }) => (
+  <Modal isOpen={isOpen} onRequestClose={cancel} style={modalStyles} contentLabel={contentLabel}>
     <h1 className="tw-text-2xl tw-font-bold">{contentLabel}</h1>
     <Box width="75vw">
       <div>{children}</div>
       <Box paddingRight="2em" textAlign="right" paddingTop="4em">
-        <button type="submit" className="btn btn-primary tw-m-2 tw-ml-auto" onClick={onRequestClose}>
+        <button type="submit" className="btn btn-primary tw-m-2 tw-ml-auto" onClick={save}>
           Save
         </button>
-        <button type="button" className="btn btn-secondary" onClick={onRequestClose}>
+        <button type="button" className="btn btn-secondary" onClick={cancel}>
           Cancel
         </button>
       </Box>

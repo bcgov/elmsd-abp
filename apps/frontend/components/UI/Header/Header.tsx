@@ -9,14 +9,11 @@ const Header = () => (
       <a href="https://gov.bc.ca">
         <img width="175px" src="/BCID_H_rgb_rev.svg" alt="Go to the Government of British Columbia website" />
       </a>
-      <h2 className="tw-text-xl">
-        <Link className=" tw-no-underline hover:tw-text-white focus:tw-text-white" href="/">
-          {" "}
-          WorkBC Annual Bussiness Plan
-        </Link>
-      </h2>
+      <Link type="button" className="tw-text-xl tw-no-underline hover:tw-text-white focus:tw-text-white" href="/">
+        <h2> WorkBC Annual Bussiness Plan</h2>
+      </Link>
       <div aria-label="This application is currently in Beta phase" className="Beta-PhaseBanner">
-        {process.env.VITE_REACT_ENVIRONMENT || "Beta"}
+        {process.env.NEXT_APP_ENVIRONMENT || "Beta"}
       </div>
     </div>
   </header>

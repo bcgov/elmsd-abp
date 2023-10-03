@@ -7,14 +7,22 @@ import CustomEditor from "../../../../components/editor/CustomEditor"
 export default function Page({ params }: { params: { catchment: string } }) {
   const [modalIsOpen, setIsOpen] = React.useState(false)
   const [text, setText] = React.useState("")
+  const [modalText, setModalText] = React.useState(text)
 
   const openModal = useCallback(() => {
+    setModalText(text)
     setIsOpen(true)
-  }, [])
+  }, [text])
 
-  const closeModal = useCallback(() => {
+  const saveModal = useCallback(() => {
+    setText(modalText)
+    setIsOpen(false)
+  }, [modalText])
+
+  const cancelModal = useCallback(() => {
     setIsOpen(false)
   }, [])
+
   return (
     <main className="tw-min-h-screen">
       <div className=" tw-mx-8 tw-p-4">
@@ -30,8 +38,8 @@ export default function Page({ params }: { params: { catchment: string } }) {
             Edit
           </button>
           <article className="tw-max-w-none tw-prose" dangerouslySetInnerHTML={{ __html: text }} />
-          <BCGovModal isOpen={modalIsOpen} onRequestClose={closeModal} contentLabel="Edit Section">
-            <CustomEditor text={text} setText={setText} />
+          <BCGovModal isOpen={modalIsOpen} save={saveModal} cancel={cancelModal} contentLabel="Edit Section">
+            <CustomEditor text={modalText} setText={setModalText} />
           </BCGovModal>
         </div>
       </div>
